@@ -12,14 +12,12 @@ test() ->
     parse_line("    Assets:Current:Wallet"),
     parse_line("    Expenses:Groceries      10 EUR").
 
+%%====================================================================
+%% Internal functions
+%%====================================================================
 parse_line(String) ->
     {ok, Tokens, _} = ledger_lexer:string(String),
     io:format("~p~n", [Tokens]),
     AST = ledger_parser:parse(Tokens),
     io:format("~p~n", [AST]),
     AST.
-
-
-%%====================================================================
-%% Internal functions
-%%====================================================================

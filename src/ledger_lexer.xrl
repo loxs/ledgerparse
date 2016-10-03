@@ -2,9 +2,9 @@ Definitions.
 
 NEWLINE = [\n\r]
 INT = \-?[0-9]+
-FLOAT = \-[0-9]+(\.[0-9]+)?
+FLOAT = \-?[0-9]+\.[0-9]+
 SEPARATOR = (\s\s|\s\t|\t)[\s\t]*
-WORD = [A-Za-z0-9]+
+WORD = [A-Za-z0-9-&]+
 
 Rules.
 
